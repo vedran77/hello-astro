@@ -1,0 +1,37 @@
+---
+
+type NavbarItem = {
+    title: string;
+    path: string;
+}
+
+const items: NavbarItem[] = [
+    {
+        title: 'Home',
+        path: '/'
+    },
+    {
+        title: 'Blog',
+        path: '/blog'
+    },
+    {
+        title: 'About',
+        path: '/about'
+    },
+]
+
+---
+
+<div>
+    <div>
+        Blazingly Fast Blog
+    </div>
+
+    <div>
+        <ul>
+            {items.map((item: NavbarItem) => (
+                <li><a href={item.path}>{item.title}</a></li>
+            ))}
+        </ul>
+    </div>
+</div>
